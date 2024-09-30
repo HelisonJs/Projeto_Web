@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #000;
+    color: #eee;
+    font-size: 12px;
+}
+
+header{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+}
+
+header a{
+    color: #eee;
+    margin-right: 40px;
+}
+
+footer{
+    position: relative;
+    z-index: 2;
+    bottom: -95vh;
+    gap: 20px;
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.info_esquerdo{
+    display: flex;
+    gap: 30px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.info_direito{
+    display: flex;
+    gap: 30px;
+    white-space: nowrap;
+}
+
+a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #eee;
+}
+
+a:hover{
+    color: #c6ccd8;
+    transition: 0.3s;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    margin-top: -50px;
+    overflow: hidden;
+}
+
+.container .sliders .list-item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container .sliders .list-item img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+}
+
+.container .sliders .list-item .content{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    padding-right: 30%;
+    width: 80%;
+    color: #eee;
+    text-shadow:  0 5px 10px #0004;
+}
+
+.container .sliders .list-item .title{
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1.3em;
+}
+
+.container .sliders .list-item .description{
+    font-size: 1.5em;
+}
+
+.container .sliders .list-item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 50px;
+    margin-top: 30px;
+    gap: 5px;
+}
+
+.container .sliders .list-item button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.container .sliders .list-item button:hover{
+    background-color: transparent;
+    border: 1px solid #eee;
+    color: #eee;
+    transition: 0.7s;
+}
+
+.container .sliders .list-item button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #eee;
+    color: #eee;
+}
+
+.container .sliders .list-item button:nth-child(2):hover{
+    background-color: transparent;
+    color: #000;
+}
+
+
+.container .sliders{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    margin-top: -50px;
+    position: absolute;
+}
+
+.container .sliders li{
+    list-style: none;
+    position: absolute;
+}
+
+.container .sliders img{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.container .sliders input{
+    display: none;
+}
+
+.container .sliders label {
+    background-color: #fff;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.container .sliders li:nth-child(1) label {
+    left: 40px;
+}
+
+.container .sliders li:nth-child(2) label {
+    left: 70px;
+}
+
+.container .sliders li:nth-child(3) label {
+    left: 100px;
+}
+
+.container .sliders li:nth-child(4) label {
+    left: 130px;
+}
+
+.container .sliders .content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .sliders img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .sliders li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.container .sliders li input:checked ~ .content {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
